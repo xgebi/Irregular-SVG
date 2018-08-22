@@ -20,11 +20,7 @@ generateButton.addEventListener("click", () => {
 
 
   for (let i = 0; i < numberOfElements; i++) {
-    if (Math.random() > 0.5) {
-      appendRectangle();
-    } else {
-      appendCircle();
-    }    
+    svgElement.appendChild(Math.random() > 0.5 ? appendRectangle(): appendCircle());  
   }
 
   let image = document.createElement("img");
@@ -42,7 +38,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-function appendRectangle() {
+function appendRectangle(svgElement) {
   let width = getRandomInt(600);
   let height = getRandomInt(300);
   let x = getRandomInt(600 - width);
@@ -59,10 +55,10 @@ function appendRectangle() {
   rect.setAttribute("y", y);
   rect.setAttribute("fill", "hsla(" + hue + ", " + saturation + ", " + lightness + ", " + opacity + ")" );    
 
-  svgElement.appendChild(rect);
+  return rect;
 }
 
-function appendCircle() {
+function appendCircle(svgElement) {
   let r = getRandomInt(150);
   let cx = getRandomInt(600 - (r / 2));
   let cy = getRandomInt(300 - (r / 2));
@@ -77,5 +73,5 @@ function appendCircle() {
   circle.setAttribute("cy", cy);
   circle.setAttribute("fill", "hsla(" + hue + ", " + saturation + ", " + lightness + ", " + opacity + ")" ); 
 
-  svgElement.appendChild(circle);
+  return circle;
 }

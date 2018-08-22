@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'M PLUS Rounded 1c';
+  font-style: normal;
+  font-weight: 400;
+  src: local('M PLUS Rounded 1c'), local('MPLUSRounded1c-Regular'), url('fonts/MPLUSRounded1c-Regular.ttf') format('woff2');  
+}
+
+@font-face {
+  font-family: 'M PLUS Rounded 1c';
+  font-style: normal;
+  font-weight: 700;
+  src: local('M PLUS Rounded 1c'), local('MPLUSRounded1c-Regular'), url('fonts/MPLUSRounded1c-Bold.ttf') format('woff2');  
+}
+
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;  
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+input,
+button {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.25rem;
+}
