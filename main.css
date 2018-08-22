@@ -29,8 +29,8 @@ button {
   font-size: 1.25rem;
 }
 
-#svg-holder,
-#svg-code,
+#svg-holder:not(:empty),
+#svg-code:not(:empty),
 #controls {
   grid-column: 2 / 3;
   margin: 2rem 0;
