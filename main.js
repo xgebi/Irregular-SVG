@@ -32,6 +32,8 @@ generateButton.addEventListener("click", () => {
   image.setAttribute("src", "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(serializedSvg));
   svgHolder.appendChild(image);
 
+  document.querySelector("#svg-code").textContent = serializedSvg;
+
 });
 
 function getRandomInt(max) {
